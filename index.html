@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>proyecto</title>
+</head>
+<body background="https://wallpaperaccess.com/full/3176003.jpg">
+<body>
+  <font size="10" face="Consolas" color="indigo">
+    <center>WELCOME TO</center>
+<center>CINEMATICA BASICA</center>
+</font>
+<hr align="center" size="5" width="90%" color="indigo" noshade>
+<font size="3" face="Consolas" color="white">
+<center>Esta pagina fue creada entre 5 mentes brillantes, con la finalidad de que aqui podras encontrar</center>
+<center>apoyo que ayude a resolver los problemas de MRU, MRUV & caida libre. Solo debes ingresar</center>
+<center>los datos de tu problema correspondiente en nuestro sistema y, al usar el boton 'calcular'</center>
+<center>este automaticamente te dara el resultado</center>
+</font>
+<p>.</p>
+<p>.</p>
+<font size="8" face="Consolas" color="white">
+<center>----------------------MRUV----------------------</center>
+</font>
+<center><table border="1" bgcolor="mediumpurple"></center>
+<tr>
+<td>
+<body>
+<center>CALCULA LA VELOCIDAD INICIAL:</center><br><br>
+</body>
+<body>
+
+Ingrese Intervalo de Tiempo:<input type="text" id="t" size=20>
+<br><br>
+Ingrese Aceleracion Constante:<input type="text" id="a" size=20>
+<br><br>
+Ingrese Velocidad Final:<input type="text" id="vf" size=20>
+<br><br>
+<center><button onclick="calculate4()">Calcular</button></center>
+
+<script>
+function calculate4() 
+{
+var n1 = document.getElementById("t").value;
+var n2 = document.getElementById("a").value;
+var n3 = document.getElementById("vf").value;
+var n4 = parseFloat(n3)-parseFloat(n1)*parseFloat(n2);
+if(!isNaN(n4))
+{
+document.getElementById("Rr").innerHTML="La velocidad inicial es:"+n4;
+}
+}
+</script>
+<h1 id="Rr"></h1>
+</td>
+</tr>
+</table>
+</body>
+
+<center><table border="1" bgcolor="mediumpurple"></center>
+<tr>
+<td>
+<body>
+<center>CALCULA LA VELOCIDAD FINAL:</center><br><br>
+</body>
+<body>
+
+Ingrese Velocidad inicial:<input type="text" id="vi" size=20>
+<br><br>
+Ingrese Constante de Gravedad:<input type="text" id="g" size=20>
+<br><br>
+Ingrese Intervalo de Tiempo:<input type="text" id="t" size=20>
+<br><br>
+<center><button onclick="calculate5()">Calcular</button></center>
+
+<script>
+function calculate5() 
+{
+var n1= document.getElementById("vi").value;
+var n2= document.getElementById("g").value;
+var n3= document.getElementById("t").value;
+var n= parseFloat(n2)*parseFloat(n3)+parseFloat(n1);
+if(!isNaN(n))
+{
+document.getElementById("rr").innerHTML="La velocidad final es:"+n;
+}
+}
+</script>
+<h1 id="rr"></h1>
+</td>
+</tr>
+</table>
+</body>
+
+<center><table border="1" bgcolor="mediumpurple"></center>
+<tr>
+<td>
+<body>
+<center>CALCULA LA DISTANCIA:</center><br><br>
+</body>
+<body>
+
+Ingrese Tiempo: <input type="text" id="t" size=20><br><br>
+Ingrese Aceleracion Constante: <input type="text" id="a" size=20><br><br>
+<center><button onclick="calculate6()">Calcular</button></center>
+
+<script>
+function calculate6() {
+var n1 = document.getElementById("t").value;
+var n2 = document.getElementById("a").value;
+var n6 = parseFloat(n2)*parseFloat(n1)*parseFloat(n2)*parseFloat(n1)/2;
+if(!isNaN(n6))
+{
+document.getElementById("ra").innerHTML="La distancia es:"+n6;
+}
+}
+</script>
+<h1 id="ra"></h1>
+</td>
+</tr>
+</table>
+</body>
+
+<center><table border="1" bgcolor="mediumpurple"></center>
+<tr>
+<td>
+<body>
+<center>CALCULA EL TIEMPO:</center><br><br>
+</body>
+<body>
+
+Ingrese Velocidad Inicial: <input type="text" id="vi" size="20">
+<br><br>
+Ingrese Aceleracion Constante: <input type="text" id="a" size="20">
+<br><br>
+Ingrese Velocidad Final: <input type="text" id="vf" size="20">
+<br><br>
+<center><button onclick="calculate7()">Calcular</button></center>
+
+<script>
+function calculate7() {
+var Vi = document.getElementById("vi").value;
+var Ac = document.getElementById("a").value;
+var Vf = document.getElementById("vf").value;
+var n7 = parseFloat(Vf)-parseFloat(Vi)/parseFloat(Ac);
+if(!isNaN(n7))
+{
+document.getElementById("ram").innerHTML="El tiempo es:"+n7;
+}
+}
+</script>
+<h1 id="ram"></h1>
+</td>
+</tr>
+</table>
+</body>
+
+
+<font size="8" face="Consolas" color="white">
+<center>----------------------MRU----------------------</center>
+</font>
+<center><table border="4" bgcolor="palevioletred"></center>
+<tr>
+<td>
+<font color=”#030924″ size=30 face=”MS Sans Serif”>
+</font>
+<body>
+<br>
+<center><b>T(s)</b><input type="text" id="Tiempo"></center>
+<br>
+<br>
+<center><b>d(m)</b><input type="text" id="Distancia" size=20></center>
+<br>
+<br>
+<center><b>V(m/s)</b><input type="text" id="Velocidad"></center>
+<br>
+<br>
+<center><button onclick="calculate1()">Calcular el tiempo</button></center>
+
+<center><button onclick="calculate2()">Calcular la distancia</button></center>
+
+<center><button onclick="calculate3()">Calcular la velocidad</button></center>
+
+<script>
+function calculate1()
+{
+var T=document.getElementById("Tiempo").value;
+var D=document.getElementById("Distancia").value;
+var V=document.getElementById("Velocidad").value;
+var R=parseFloat(D)/parseFloat(V);
+if(!isNaN(R))
+{
+document.getElementById("Resultado").innerHTML="El tiempo es:"+R+"s";
+}
+}
+function calculate2()
+{
+var T=document.getElementById("Tiempo").value;
+var D=document.getElementById("Distancia").value;
+var V=document.getElementById("Velocidad").value;
+var R=parseFloat(T)*parseFloat(V);
+if(!isNaN(R))
+{
+document.getElementById("Resultado").innerHTML="La distancia es:"+R+"m";
+}
+}
+function calculate3()
+{
+var T=document.getElementById("Tiempo").value;
+var D=document.getElementById("Distancia").value;
+var V=document.getElementById("Velocidad").value;
+var R=parseFloat(D)/parseFloat(T);
+if(!isNaN(R))
+{
+document.getElementById("Resultado").innerHTML="La velocidad es:"+R+"m/s";
+}
+}
+</script>
+
+<h1 id="Resultado"></h1>
+<td>
+<tr>
+<table>
+</body>
+
+<font size="8" face="consolas" color="white">
+<center>-------------------CAIDA LIBRE-------------------</center>
+
+<html>
+<center><table border="5" bgcolor="red"></center>
+<tr>
+<td>
+<body>
+<center>Caida libre - Llena los datos:</center><br><br>
+</body>
+<body>
+
+<form name="MF">
+Ingrese la altura : <input type="text" name="a" size="20"><br><br>
+
+Resultado: <input type="text" name="resultado" size"20"><br><br>
+<center><input type="button" value="calcular" onclick="calcular()"></center>
+</form>
+<script>
+function calcular() {
+var n1 = parseFloat(document.MF.a.value);
+
+document.MF.resultado.value=(2*n1/9.81);
+}
+</script>
+</body>
+</td>
+</tr>
+</table>
+</html>
+<center>INTEGRANTES</center>
+</font>
+<hr align="center" size="7" width="90%" color="indigo" noshade>
+<font size="4" face="Consolas" color="white">
+<center>BLANCAS CANO LESLIE GUADALUPE</center>
+<center>MARURI GALVAN ALONDRA</center>
+<center>RAMIREZ GALLEGOS ANGEL ANTONIO</center>
+<center>PALACIOS MONTOYA JUAN CARLOS</center>
+<center>SOTO AVILA ANSELMO AARON</center>
+<center>GRUPO:4-V</center>
+</font>
+</body>
+</html>
